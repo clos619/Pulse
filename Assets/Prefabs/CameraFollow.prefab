@@ -39,7 +39,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4126147543985504}
   - component: {fileID: 114540095861751594}
-  - component: {fileID: 114241668795337108}
   m_Layer: 0
   m_Name: CameraFollow
   m_TagString: Untagged
@@ -221,19 +220,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1973809824515668}
   m_Enabled: 1
---- !u!114 &114241668795337108
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1755845567158976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eae262f7c3bca84180d10bb2c1d4c88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linearIntensity: 0.25
-  angularIntensity: 5
 --- !u!114 &114356631032299398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,8 +231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eae262f7c3bca84180d10bb2c1d4c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linearIntensity: 0.25
-  angularIntensity: 5
+  linearIntensity: 0
+  angularIntensity: 12
+  angular: 1
+  translation: 1
+  magnitude: 5
+  frequency: 100
 --- !u!114 &114540095861751594
 MonoBehaviour:
   m_ObjectHideFlags: 1
