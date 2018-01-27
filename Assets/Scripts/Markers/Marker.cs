@@ -81,6 +81,7 @@ namespace Assets.Scripts.Markers
 
             if (_onScreen && !_seen)
             {
+                pingEndTime = MaxVisibleTime;
                 _seen = true;
             }
 

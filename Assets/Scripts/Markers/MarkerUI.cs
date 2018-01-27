@@ -12,7 +12,7 @@ namespace Assets.Scripts.Markers
         private RectTransform _rectTransform; 
 
         // Use this for initialization
-        void Start ()
+        void Awake ()
         {
             _rectTransform = GetComponent<RectTransform>();
         }
