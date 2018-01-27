@@ -16,6 +16,9 @@ namespace Assets.Scripts.Markers
     {
         [SerializeField] private PlayerStats _player;
 
+        public float MaxVisibleTime = 5;
+        private float pingEndTime = 0;
+
         [SerializeField]
         private bool _seen = false;
         public bool Seen
@@ -64,6 +67,11 @@ namespace Assets.Scripts.Markers
         {
             camera = Camera.main;
             _player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+            PlayerPing ping = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPing>();
+            if (ping != null)
+            {
+                ping.OnPing.AddListener(StartVisibleAfterPing);
+            }
         }
 	
         // Update is called once per frame
@@ -75,6 +83,17 @@ namespace Assets.Scripts.Markers
             {
                 _seen = true;
             }
+
+            //Debug.Log("Time: " + Time.time + " NextPingTime:" + pingEndTime);
+
+            //Check if ping is still in effect
+            if (Time.time <= pingEndTime)
+            {
+                _seen = true;
+            }
+            else
+                _seen = false;
+
 
             if (_seenMaxRange > 0 && _seen)
             {
@@ -89,7 +108,7 @@ namespace Assets.Scripts.Markers
                 OnScreenPosition.Invoke(this);
             }
 
-            
+
         }
 
          
@@ -110,5 +129,12 @@ namespace Assets.Scripts.Markers
             _onScreen = false;
             //Debug.Log(_onScreenPos);
         }
+
+        public void StartVisibleAfterPing(Transform playerTransform)
+        {
+            pingEndTime = Time.time + MaxVisibleTime;
+
+            Debug.Log("The Marker on "+name+" heard a ping.  Time: "+Time.time +" endPingTime: "+ pingEndTime);
+        } 
     }
 }
