@@ -10,6 +10,9 @@ public class Tower : MonoBehaviour
     private float _energy = 200;
     public float Energy {get {return _energy;}}
 
+    [SerializeField]
+    private AudioSource _audio;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -33,6 +36,7 @@ public class Tower : MonoBehaviour
             var player = other.GetComponent<PlayerStats>();
             player.Replenish(_energy);
             _energy = 0;
+            _audio.Play();
         }
 
     }
