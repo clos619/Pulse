@@ -7,17 +7,28 @@ public class towerUI : MonoBehaviour {
     public int towersTotal = 3;
     public int towersFound = 0;
     public bool foundOne = true;
-    public string Towers;
+    
     public Text Towers_txt;
     public Text totalTowers;
     
-    
-	// Use this for initialization
-	void Start () {
+
+
+
+    // Use this for initialization
+    void Start () {
         towersFound = 0;
         foundOne = false;
-        settowersFound();
+
+        Towers_txt.text = " " + towersFound;
         totalTowers.text = "Total Towers: " + towersTotal;
+        
+       
+        totalTowers = GameObject.FindGameObjectWithTag("totalTowers").GetComponent<Text>();
+        Towers_txt = GameObject.FindGameObjectWithTag("Towers_txt").GetComponent<Text>();
+       
+       
+        
+        
         
 	}
 	
@@ -32,8 +43,5 @@ public class towerUI : MonoBehaviour {
             towersFound = towersFound + 1;
         }
     }
-    void settowersFound()
-    {
-        Towers_txt.text = "Towers Found: " + towersFound;
-    }
+   
 }
