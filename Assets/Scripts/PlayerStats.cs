@@ -45,10 +45,10 @@ namespace Assets.Scripts
             _energy -= inputScale * Time.deltaTime * _moveDepleteSpeed;
         }
 
-        void replenish()
+        public void Replenish(float amount)
         {
             
-            _energy = _energy + 100;
+            _energy = _energy + amount;
             
             //screenShake.stop();
             //playerAudio.stop();

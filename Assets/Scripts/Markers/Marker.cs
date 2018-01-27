@@ -43,12 +43,15 @@ namespace Assets.Scripts.Markers
         {
             get { return _onScreen; }
         }
+        [SerializeField]
         Vector3 screenPos;
+        [SerializeField]
         Vector2 _onScreenPos;
         public Vector2 OnScreenPos
         {
             get { return _onScreenPos; }
         }
+        [SerializeField]
         private float _max;
 
         [SerializeField]
@@ -112,9 +115,24 @@ namespace Assets.Scripts.Markers
 
         }
 
+        // position = the world position of the entity to be tested
+        private Vector3 CalculateWorldPosition(Vector3 position, Camera camera) {  
+            //if the point is behind the camera then project it onto the camera plane
+            Vector3 camNormal = camera.transform.forward;
+            Vector3 vectorFromCam = position - camera.transform.position;
+            float camNormDot = Vector3.Dot (camNormal, vectorFromCam.normalized);
+            if (camNormDot <= 0f) {
+                //we are beind the camera, project the position on the camera plane
+                float camDot = Vector3.Dot (camNormal, vectorFromCam);
+                Vector3 proj = (camNormal * camDot * 1.01f);   //small epsilon to keep the position infront of the camera
+                position = camera.transform.position + (vectorFromCam - proj);
+            }
+ 
+            return position;
+        }
          
         void CameraPos () {
-            screenPos = camera.WorldToViewportPoint(transform.position); //get viewport positions
+            screenPos = camera.WorldToViewportPoint(CalculateWorldPosition(transform.position, camera)); //get viewport positions
  
             if(screenPos.x >= 0 && screenPos.x <= 1 && screenPos.y >= 0 && screenPos.y <= 1){
                 //Debug.Log("already on screen, don't bother with the rest!");
@@ -125,8 +143,8 @@ namespace Assets.Scripts.Markers
             _onScreenPos = new Vector2(screenPos.x-0.5f, screenPos.y-0.5f)*2; //2D version, new mapping
             _max = Mathf.Max(Mathf.Abs(_onScreenPos.x), Mathf.Abs(_onScreenPos.y)); //get largest offset
             _onScreenPos = (_onScreenPos/(_max*2))+new Vector2(0.5f, 0.5f); //undo mapping
-            _onScreenPos = new Vector2(Mathf.Clamp(_onScreenPos.x, _maxEdge, 1 - _maxEdge),
-                Mathf.Clamp(_onScreenPos.y, _maxEdge, 1 - _maxEdge));
+            //_onScreenPos = new Vector2(Mathf.Clamp(_onScreenPos.x, _maxEdge, 1 - _maxEdge),
+            //    Mathf.Clamp(_onScreenPos.y, _maxEdge, 1 - _maxEdge));
             _onScreen = false;
             //Debug.Log(_onScreenPos);
         }
