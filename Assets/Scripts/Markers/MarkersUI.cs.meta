@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e96c684137890db44a0e900510eaa1e0
+timeCreated: 1517077624
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _markerPrefab: {fileID: 114078600437835892, guid: a4a53d25625c7db47aa344578287b84d,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
