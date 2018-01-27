@@ -16,6 +16,9 @@ namespace Assets.Scripts
         [SerializeField]
         private float _movementSpeed = 5f;
 
+        /// <summary>
+        /// returns movement input from 0-1
+        /// </summary>
         public MoveEvent OnMove;
 
         // Use this for initialization
