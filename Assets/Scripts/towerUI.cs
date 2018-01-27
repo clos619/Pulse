@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class towerUI : MonoBehaviour {
     public int towersTotal = 3;
-    public int towersFound = null;
+    public int towersFound = 0;
     bool foundOne;
 	// Use this for initialization
 	void Start () {
