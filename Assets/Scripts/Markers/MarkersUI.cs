@@ -51,7 +51,7 @@ namespace Assets.Scripts.Markers
 
             }
 
-            if (marker.OnScreen == true)
+            if (marker.OnScreen == true || marker.Seen == false)
             {
                 _markers.Remove(markerUI);
                 Destroy(markerUI.gameObject);
