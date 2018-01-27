@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 1866559574}
   - component: {fileID: 1866559579}
   - component: {fileID: 1866559578}
+  - component: {fileID: 1866559580}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -476,3 +477,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterController: {fileID: 1866559578}
   _movementSpeed: 5
+  OnMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1866559580}
+        m_MethodName: UseMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Assets.Scripts.MoveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &1866559580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866559573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b51db09abdc1345bf9ae49193cf9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _energy: 1500
+  _depleteSpeed: 1
+  _moveDepleteSpeed: 5
