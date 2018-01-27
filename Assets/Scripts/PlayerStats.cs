@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using Assets.Scripts;
 
 namespace Assets.Scripts
 {
+    
+
     public class PlayerStats : MonoBehaviour
     {
+        
+        
         [SerializeField] private float _energy = 1500;
         public float Energy
         {
@@ -24,12 +30,14 @@ namespace Assets.Scripts
 
         // Use this for initialization
         void Start () {
-		
+            GameObject energyUI = GameObject.Find("energyUI");
+            PlayerStats playerStats = energyUI.GetComponent<PlayerStats>();
         }
 	
         // Update is called once per frame
         void Update ()
         {
+            
             _energy -= Time.deltaTime * _depleteSpeed;
         }
 
@@ -38,5 +46,14 @@ namespace Assets.Scripts
             _energy -= inputScale * Time.deltaTime * _moveDepleteSpeed;
         }
 
+        void replenish()
+        {
+            
+            _energy = _energy + 100;
+            
+            //screenShake.stop();
+            //playerAudio.stop();
+        }
     }
+   
 }
