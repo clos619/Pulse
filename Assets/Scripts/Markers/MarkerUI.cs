@@ -12,13 +12,18 @@ namespace Assets.Scripts.Markers
         private RectTransform _rectTransform; 
 
         // Use this for initialization
-        void Start ()
+        void Awake ()
         {
             _rectTransform = GetComponent<RectTransform>();
         }
 	
         // Update is called once per frame
         void Update ()
+        {
+            UpdatePosition();
+        }
+
+        public void UpdatePosition()
         {
             Image.sprite = Marker.Image;
             _rectTransform.anchorMax = Marker.OnScreenPos;
