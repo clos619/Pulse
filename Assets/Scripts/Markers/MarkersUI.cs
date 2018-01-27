@@ -7,6 +7,7 @@ namespace Assets.Scripts.Markers
     {
         public static MarkersUI Instance;
 
+        [SerializeField, HideInInspector]
         private MarkerUI _markerPrefab;
         [SerializeField]
         private List<MarkerUI> _markers= new List<MarkerUI>();
@@ -22,6 +23,10 @@ namespace Assets.Scripts.Markers
 		
         }
 
+        public void AddMarkerToTrack(Marker marker)
+        {
+           marker.OnScreenPosition.AddListener(OnMarkerUpdate);
+        }
 
         public void OnMarkerUpdate(Marker marker)
         {
@@ -36,13 +41,20 @@ namespace Assets.Scripts.Markers
 
             if (markerUI == null)
             {
-                if(marker.Seen == false)
+                if(marker.Seen == false || marker.OnScreen == true )
                     return;
 
                 markerUI = Instantiate(_markerPrefab, transform);
                 markerUI.Marker = marker;
                 _markers.Add(markerUI);
 
+            }
+
+            if (marker.OnScreen == true)
+            {
+                _markers.Remove(markerUI);
+                Destroy(markerUI.gameObject);
+                
             }
 
         }
