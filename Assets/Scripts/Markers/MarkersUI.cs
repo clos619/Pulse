@@ -47,6 +47,7 @@ namespace Assets.Scripts.Markers
                 markerUI = Instantiate(_markerPrefab, transform);
                 markerUI.Marker = marker;
                 _markers.Add(markerUI);
+                markerUI.UpdatePosition();
 
             }
 

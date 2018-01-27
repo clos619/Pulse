@@ -20,6 +20,11 @@ namespace Assets.Scripts.Markers
         // Update is called once per frame
         void Update ()
         {
+            UpdatePosition();
+        }
+
+        public void UpdatePosition()
+        {
             Image.sprite = Marker.Image;
             _rectTransform.anchorMax = Marker.OnScreenPos;
             _rectTransform.anchorMin = Marker.OnScreenPos;
