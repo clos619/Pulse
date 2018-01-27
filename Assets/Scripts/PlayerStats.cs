@@ -30,8 +30,7 @@ namespace Assets.Scripts
 
         // Use this for initialization
         void Start () {
-            GameObject energyUI = GameObject.Find("energyUI");
-            PlayerStats playerStats = energyUI.GetComponent<PlayerStats>();
+            
         }
 	
         // Update is called once per frame
