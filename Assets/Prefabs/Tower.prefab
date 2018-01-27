@@ -871,6 +871,9 @@ MonoBehaviour:
   _seenRange: 20
   _seenMaxRange: -1
   _image: {fileID: 21300000, guid: 1789ed745304750489b96d6730981bee, type: 3}
+  screenPos: {x: 0, y: 0, z: 0}
+  _onScreenPos: {x: 0, y: 0}
+  _max: 0
   _maxEdge: 0.05
   OnScreenPosition:
     m_PersistentCalls:
