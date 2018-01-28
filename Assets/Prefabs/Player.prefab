@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 4339461447563226}
   - component: {fileID: 33047533682995090}
   - component: {fileID: 23331507100160164}
-  - component: {fileID: 95769511301083652}
+  - component: {fileID: 95302449801441160}
   m_Layer: 0
   m_Name: Hero (1)
   m_TagString: Untagged
@@ -578,7 +578,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95769511301083652
+--- !u!95 &95302449801441160
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8553d7fc01fb27e4383d91bf9ab23c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thecoolpingableparticle: {fileID: 0}
+  thecoolpingableparticle: {fileID: 198906940547389192}
 --- !u!114 &114880051942428714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -649,7 +649,7 @@ MonoBehaviour:
   _characterController: {fileID: 143557992939981112}
   _movementSpeed: 11
   _playerVisual: {fileID: 4147220279441792}
-  Animator: {fileID: 95769511301083652}
+  Animator: {fileID: 95302449801441160}
   OnMove:
     m_PersistentCalls:
       m_Calls:
@@ -780,8 +780,8 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
-  randomSeed: -1447241172
+  scalingMode: 2
+  randomSeed: -902865258
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -1224,12 +1224,12 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 4
+    type: 10
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
-    donutRadius: 0.2
+    donutRadius: 2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
@@ -1292,7 +1292,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 0
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2
@@ -1427,7 +1427,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 60
         minScalar: 0
         maxCurve:
           serializedVersion: 2
@@ -1881,7 +1881,7 @@ ParticleSystem:
     sprites:
     - sprite: {fileID: 0}
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -2008,7 +2008,7 @@ ParticleSystem:
     speedModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 100
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -2434,7 +2434,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
@@ -2559,7 +2559,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.5
+    frequency: 3
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -3481,7 +3481,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minVertexDistance: 0.2
-    textureMode: 0
+    textureMode: 2
     ribbonCount: 1
     worldSpace: 0
     dieWithParticles: 1
@@ -3489,7 +3489,7 @@ ParticleSystem:
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
     generateLightingData: 0
-    splitSubEmitterRibbons: 0
+    splitSubEmitterRibbons: 1
     colorOverLifetime:
       serializedVersion: 2
       minMaxState: 0
