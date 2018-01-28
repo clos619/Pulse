@@ -92,7 +92,14 @@ public class GameOverManager : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ReloadLevel()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
