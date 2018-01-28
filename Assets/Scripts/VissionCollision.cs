@@ -9,6 +9,8 @@ public class VissionCollision : MonoBehaviour {
     [SerializeField]
     private AudioSource _audio;
 
+    private GameObject player;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -17,6 +19,10 @@ public class VissionCollision : MonoBehaviour {
 	void Update () {
 		if (gameOver)
         {
+
+            Vector3 destinationDirection = (player.transform.position - this.gameObject.transform.position).normalized;
+            this.gameObject.transform.rotation = Quaternion.LookRotation(destinationDirection);
+
             if (countdown < 1f)
             {
                 countdown += Time.deltaTime;
@@ -32,8 +38,9 @@ public class VissionCollision : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
+            player = col.gameObject;
             GetComponent<MeshRenderer>().enabled = false;
-            Vector3 destinationDirection = (col.gameObject.transform.position - this.gameObject.transform.position).normalized;
+            Vector3 destinationDirection = (player.transform.position - this.gameObject.transform.position).normalized;
             this.gameObject.transform.rotation = Quaternion.LookRotation(destinationDirection);
 
             this.gameObject.transform.Find("GeroBeam").gameObject.active = true;

@@ -233,7 +233,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1248804940171990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.5, y: 0.5, z: 12.5}
+  m_LocalPosition: {x: 93.798904, y: 0.5, z: -95.10554}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4767994824779430}
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5efe3bc5e3edb3e42b0a9a45eec91b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeamColor: {r: 0.20380618, g: 0.9117647, b: 0.026816634, a: 1}
+  BeamColor: {r: 0.9117647, g: 0.026816579, b: 0.026816579, a: 1}
   AnimationSpd: 0.5
   Scale: 1
   MaxLength: 32
@@ -743,7 +743,7 @@ MonoBehaviour:
   - {x: -25, y: 0, z: 25}
   - {x: -25, y: 0, z: -25}
   - {x: 25, y: 0, z: -25}
-  isPatrolling: 1
+  isPatrolling: 0
 --- !u!120 &120831702945171488
 LineRenderer:
   m_ObjectHideFlags: 1
