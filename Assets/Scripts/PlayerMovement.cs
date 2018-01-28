@@ -16,6 +16,9 @@ namespace Assets.Scripts
         [SerializeField]
         private float _movementSpeed = 5f;
 
+        [SerializeField]
+        private Transform _playerVisual;
+
         /// <summary>
         /// returns movement input from 0-1
         /// </summary>
@@ -42,6 +45,11 @@ namespace Assets.Scripts
             if (OnMove != null)
             {
                 OnMove.Invoke(input.magnitude);
+            }
+
+            if (movement.magnitude > 0.02)
+            {
+                _playerVisual.forward =  transform.TransformDirection(input);
             }
 
         }
