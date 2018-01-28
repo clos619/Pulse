@@ -9,7 +9,6 @@ public class VissionCollision : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameOver = new global::GameOverManager();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +40,7 @@ public class VissionCollision : MonoBehaviour {
             monster.Stop();
 
             gameOver = true;
+            ScreenShake.Instance.Shake(0.8f, 2);
             // Call death animation/game over stuff
             //GameOverManager.Instance.GameOver();
         }
