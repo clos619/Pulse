@@ -19,6 +19,9 @@ public class TextBox : MonoBehaviour
 
     private float _time = -1;
 
+    [SerializeField] private AudioSource _audio;
+    [SerializeField] private List<AudioClip> _voiceBlips = new List<AudioClip>();
+
 	// Use this for initialization
 	void Awake ()
 	{
@@ -56,10 +59,41 @@ public class TextBox : MonoBehaviour
 
     IEnumerator TextWrite()
     {
+        bool other = true;
+        bool blip = true;
         while (_text.maxVisibleCharacters < _text.text.Length)
         {
             _text.maxVisibleCharacters++;
             yield return new WaitForSecondsRealtime(0.050f);
+
+            if (_text.maxVisibleCharacters-1 < _text.text.Length)
+            {
+                var curChar = _text.text[_text.maxVisibleCharacters-1];
+                if (curChar == '[')
+                {
+                    blip = false;
+                }
+                else if (curChar == ']')
+                {
+                    blip = true;
+                    other = false;
+                }
+            }
+
+            if (other)
+            {
+                if (blip)
+                {
+                    _audio.clip = _voiceBlips[Random.Range(0, _voiceBlips.Count)];
+                    _audio.Play();
+                    other = false;
+                }
+            }
+            else
+            {
+                other = true;
+            }
+
         }
 
         if (_time > 0)

@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: EnemyMat
+  m_Name: MonsterMat
   m_Shader: {fileID: 4800000, guid: 56cc9c52c3901274b9ec1350c7715eac, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -73,6 +73,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8897059, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.97794116, g: 0.40987238, b: 0.70370114, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0.5514706, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.8602941, g: 0.08855967, b: 0.08855967, a: 1}
