@@ -10,11 +10,14 @@ public class TextBox : MonoBehaviour
     public static TextBox Instance;
 
     [SerializeField]
-    public Image _panel;
+    private Image _panel;
     [SerializeField]
     private TextMeshProUGUI _text;
-
+    [SerializeField]
+    private Button _button;
     public UnityEvent OnDone;
+
+    private float _time = -1;
 
 	// Use this for initialization
 	void Awake ()
@@ -25,24 +28,30 @@ public class TextBox : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+
 	    if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
 	    {
 	        Progress();
 	    }
 
-	    if (Input.GetKeyDown(KeyCode.F))
-	    {
-            ShowText("Hello Pilot, this is the final message. Goodbye");
-	    }
+	    //if (Input.GetKeyDown(KeyCode.F))
+	    //{
+     //       ShowText("Hello Pilot, this is the final message. Goodbye");
+	    //}
 	}
 
-    public void ShowText(string text)
+    public void ShowText(string text, float time = -1f)
     {
         _text.text = text;
         _text.maxVisibleCharacters = 0;
         _panel.gameObject.SetActive(true);
         StopAllCoroutines();
+        _time = time;
         StartCoroutine(TextWrite());
+
+        _button.gameObject.SetActive(_time < 0);
+        
+
     }
 
     IEnumerator TextWrite()
@@ -52,6 +61,14 @@ public class TextBox : MonoBehaviour
             _text.maxVisibleCharacters++;
             yield return new WaitForSecondsRealtime(0.050f);
         }
+
+        if (_time > 0)
+        {
+            yield return new WaitForSecondsRealtime(_time);
+            _time = -1;
+            Progress();
+        }
+
     }
 
     void Progress()
@@ -61,6 +78,9 @@ public class TextBox : MonoBehaviour
             _text.maxVisibleCharacters = _text.text.Length;
             return;
         }
+
+        if(_time > 0)
+            return;
 
         _panel.gameObject.SetActive(false);
         if (OnDone != null)
