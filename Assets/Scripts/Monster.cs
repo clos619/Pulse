@@ -255,4 +255,11 @@ public class Monster : MonoBehaviour {
         }
     }
 
+    public void Stop()
+    {
+        isPatrolling = false;
+        isRotating = false;
+        isTracking = false;
+    }
+
 }
