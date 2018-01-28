@@ -143,8 +143,8 @@ namespace Assets.Scripts.Markers
             _onScreenPos = new Vector2(screenPos.x-0.5f, screenPos.y-0.5f)*2; //2D version, new mapping
             _max = Mathf.Max(Mathf.Abs(_onScreenPos.x), Mathf.Abs(_onScreenPos.y)); //get largest offset
             _onScreenPos = (_onScreenPos/(_max*2))+new Vector2(0.5f, 0.5f); //undo mapping
-            //_onScreenPos = new Vector2(Mathf.Clamp(_onScreenPos.x, _maxEdge, 1 - _maxEdge),
-            //    Mathf.Clamp(_onScreenPos.y, _maxEdge, 1 - _maxEdge));
+            _onScreenPos = new Vector2(Mathf.Clamp(_onScreenPos.x, _maxEdge, 1 - _maxEdge),
+                Mathf.Clamp(_onScreenPos.y, _maxEdge, 1 - _maxEdge));
             _onScreen = false;
             //Debug.Log(_onScreenPos);
         }
