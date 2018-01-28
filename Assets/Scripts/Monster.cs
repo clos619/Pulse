@@ -51,7 +51,7 @@ public class Monster : MonoBehaviour {
     private float rotationAngle;
     private float rotationTime;
 
-
+    private Transform playerTransform;
 
 	// Use this for initialization
 	void Start () {
@@ -89,8 +89,10 @@ public class Monster : MonoBehaviour {
         isTracking = false;
 
         PlayerPing ping = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPing>();
+	    
         if (ping != null)
         {
+            playerTransform = ping.transform;
             ping.OnPing.AddListener(Ping);
         }
 
@@ -153,6 +155,13 @@ public class Monster : MonoBehaviour {
             Rotate(true); // is a sentry
         }
 
+        if (isTracking && playerTransform != null)
+        {
+            if (Vector3.Distance(playerTransform.position, transform.position) < 40)
+            {
+                MusicManager.Instance.EnemyChase(2);
+            }
+        }
 
         // Also need code for spotting the player.
         // Or just attach a cone collider to the front of the monster and attach a script to that?
