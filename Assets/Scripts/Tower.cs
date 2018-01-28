@@ -29,15 +29,16 @@ public class Tower : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Player near tower!");
+            if (_energy > 0)
+            {
+                var player = other.GetComponent<PlayerStats>();
+                player.Replenish(_energy);
+                _energy = 0;
+                _audio.Play();
+            }
         }
 
-        if (_energy > 0)
-        {
-            var player = other.GetComponent<PlayerStats>();
-            player.Replenish(_energy);
-            _energy = 0;
-            _audio.Play();
-        }
+        
 
     }
 }
