@@ -29,7 +29,7 @@ namespace Assets.Scripts
             get { return _depleteSpeed; }
         }
 
-        [SerializeField] private float _moveDepleteSpeed = 5f;
+        [SerializeField] private float _moveDepleteSpeed = 40f;
         public float MoveDepleteSpeed
         {
             get { return _moveDepleteSpeed; }
