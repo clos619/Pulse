@@ -32,26 +32,26 @@ public class energyUI : MonoBehaviour {
         energySlider.size = playerstats.Energy/playerstats.MaxEnergy;
 
 
-        if (playerstats.Energy < halfEnergy)
+        if (playerstats.Energy < quarterEnergy)
+        {
+            Flash();
+        }
+        else //if (playerstats.Energy < halfEnergy)
         {
             ColorBlock cb = energySlider.colors;
-            cb.normalColor = Color.red;
+            cb.normalColor = Color.Lerp(Color.red, Color.white, (playerstats.Energy - halfEnergy) / halfEnergy);
 
             energySlider.colors = cb;
         }
-        else
+/*        else
         {
             ColorBlock cb = energySlider.colors;
             cb.normalColor = Color.white;
 
             energySlider.colors = cb;
         }
-
-        if (playerstats.Energy < quarterEnergy)
-        {
-            Flash();
-        }
-
+        */
+        
     }
 
     void Flash()
