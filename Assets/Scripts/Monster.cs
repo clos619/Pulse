@@ -27,6 +27,8 @@ public class Monster : MonoBehaviour {
     public float trackMaxDistance;
 
     // Array of points to patrol between.
+    // Points are relative to the monster's starting position.
+    // Converted to real coordinates during Start().
     public Vector3[] patrolPath;
 
     // Is the monster moving along a path or just rotating in place?
@@ -67,6 +69,14 @@ public class Monster : MonoBehaviour {
             else
             {
                 currentPatrolPoint = 0;
+
+                // Convert patrolPath points from relative coordinates to real coordinates.
+                for (int i = 0; i < patrolPath.Length; ++i)
+                {
+                    patrolPath[i].x += this.gameObject.transform.position.x;
+                    patrolPath[i].y += this.gameObject.transform.position.y;
+                    patrolPath[i].z += this.gameObject.transform.position.z;
+                }
 
                 RotateCalcs();
             }
