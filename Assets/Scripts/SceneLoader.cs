@@ -16,7 +16,10 @@ public class SceneLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+	    if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+	    {
+	        StartCoroutine(LoadGameScene());
+	    }
 	}
 
     public void OnClick(string type)
