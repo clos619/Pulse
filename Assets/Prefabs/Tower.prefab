@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 114277318590160298}
   - component: {fileID: 114344519574040592}
   - component: {fileID: 65228141670768570}
+  - component: {fileID: 114637979424437122}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -227,8 +228,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1317612380054262}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.752, y: -0, z: 80.073}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 200.85567, y: 0, z: 14.754553}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4072178371131086}
@@ -1014,3 +1015,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _energy: 200
   _audio: {fileID: 82975894239465468}
+--- !u!114 &114637979424437122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317612380054262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7549d0b3c0e5dfd41b387bc985f593a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
