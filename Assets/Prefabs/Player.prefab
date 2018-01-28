@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _energy: 1500
-  _depleteSpeed: 1
+  _depleteSpeed: 5
   _moveDepleteSpeed: 10
 --- !u!114 &114677670316399090
 MonoBehaviour:

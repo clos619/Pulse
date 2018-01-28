@@ -12,6 +12,9 @@ public class GameOverManager : MonoBehaviour
 
     [SerializeField] private Image _innerPanel;
     [SerializeField] private Image _innerOverPanel;
+
+    private bool _gameover = false;
+
 	// Use this for initialization
 	void Awake ()
 	{
@@ -41,6 +44,11 @@ public class GameOverManager : MonoBehaviour
 
 	// Update is called once per frame
 	public void GameOver () {
+        if(_gameover)
+            return;
+
+	    _gameover = true;
+
 		//game over man, game over
 	    Time.timeScale = 0;
         StopAllCoroutines();

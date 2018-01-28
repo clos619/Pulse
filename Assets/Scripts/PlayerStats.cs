@@ -38,6 +38,14 @@ namespace Assets.Scripts
         {
             
             _energy -= Time.deltaTime * _depleteSpeed;
+
+            if (_energy <= 0)
+            {
+                if (GameOverManager.Instance != null)
+                {
+                    GameOverManager.Instance.GameOver();
+                }
+            }
         }
 
         public void UseMove(float inputScale)
