@@ -648,10 +648,6 @@ Prefab:
       propertyPath: OnScreenPosition.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1727415696}
-    - target: {fileID: 4011597788425806, guid: 75ff889e20161464cafb5e8654730a80, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 21.171001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75ff889e20161464cafb5e8654730a80, type: 2}
   m_IsPrefabParent: 0
