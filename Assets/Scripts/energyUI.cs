@@ -5,18 +5,28 @@ using UnityEngine.UI;
 using Assets.Scripts;
 
 public class energyUI : MonoBehaviour {
-    public Slider energySlider;
+    public Scrollbar energySlider;
     public PlayerStats playerstats;
+
 
     // Use this for initialization
     void Start () {
-        playerstats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-        energySlider.enabled = true;
+        Debug.Log(energySlider);
+        energySlider.size = playerstats.Energy/1500;
+      
+  
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
-        energySlider.value = playerstats.Energy;
+        
+        energySlider.size = playerstats.Energy/1500;
+        
+
+        
+       
+
     }
     
 }

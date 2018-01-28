@@ -19,12 +19,12 @@ public class towerUI : MonoBehaviour {
         towersFound = 0;
         foundOne = false;
 
-        Towers_txt.text = " " + towersFound;
+        Towers_txt.text = "               " + towersFound;
         totalTowers.text = "Total Towers: " + towersTotal;
         
        
-        totalTowers = GameObject.FindGameObjectWithTag("totalTowers").GetComponent<Text>();
-        Towers_txt = GameObject.FindGameObjectWithTag("Towers_txt").GetComponent<Text>();
+
+        
        
        
         
