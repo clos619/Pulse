@@ -213,8 +213,8 @@ MonoBehaviour:
   stunTime: 0
   trackMaxDistance: 40
   patrolPath:
-  - {x: 25, y: 1, z: 25}
-  - {x: -25, y: 1, z: 25}
-  - {x: -25, y: 1, z: -25}
-  - {x: 25, y: 1, z: -25}
+  - {x: 25, y: 0, z: 25}
+  - {x: -25, y: 0, z: 25}
+  - {x: -25, y: 0, z: -25}
+  - {x: 25, y: 0, z: -25}
   isPatrolling: 1
