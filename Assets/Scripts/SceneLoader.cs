@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour {
 
@@ -26,11 +27,10 @@ public class SceneLoader : MonoBehaviour {
 
     private IEnumerator LoadGameScene()
     {
-        yield return new WaitForSeconds(3);
-        Logo.SetActive(false);
-        Debug.Log("WTF", LoadingText);
-        //LoadingText.SetActive(true);
+        yield return new WaitForSeconds(1f);
         LoadingParticles.SetActive(true);
+        LoadingText.SetActive(true);
+        Logo.SetActive(false);
 
         //TODO: Abstract this if we need to load a different scene.
         AsyncOperation async = SceneManager.LoadSceneAsync("Game");
