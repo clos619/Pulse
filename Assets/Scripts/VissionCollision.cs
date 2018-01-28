@@ -6,6 +6,8 @@ public class VissionCollision : MonoBehaviour {
 
     private bool gameOver = false;
     private float countdown = 0f;
+    [SerializeField]
+    private AudioSource _audio;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +43,7 @@ public class VissionCollision : MonoBehaviour {
 
             gameOver = true;
             ScreenShake.Instance.Shake(0.8f, 2);
+            _audio.Play();
             // Call death animation/game over stuff
             //GameOverManager.Instance.GameOver();
         }
