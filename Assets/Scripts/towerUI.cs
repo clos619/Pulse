@@ -7,7 +7,7 @@ public class towerUI : MonoBehaviour {
     public int towersTotal = 3;
     public int towersFound = 0;
     public bool foundOne = true;
-    
+    public Tower tower;
     public Text Towers_txt;
     public Text totalTowers;
     
@@ -21,9 +21,10 @@ public class towerUI : MonoBehaviour {
 
         Towers_txt.text = "               " + towersFound;
         totalTowers.text = "Total Towers: " + towersTotal;
-        
-       
 
+      
+
+        
         
        
        
@@ -34,14 +35,19 @@ public class towerUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        foundTower();
-	}
-    void foundTower()
-    {
-        if(foundOne == true)
+
+
+        Towers_txt.text = "               " + towersFound;
+        totalTowers.text = "Total Towers: " + towersTotal;
+
+        if (towersFound <= 3)
         {
-            towersFound = towersFound + 1;
+            towersFound++;
         }
+
+
+
     }
+   
    
 }
