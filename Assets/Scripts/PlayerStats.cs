@@ -23,13 +23,13 @@ namespace Assets.Scripts
             get { return _energy; }
         }
 
-        [SerializeField] private float _depleteSpeed = 1f;
+        [SerializeField] private float _depleteSpeed = 50f;
         public float DepleteSpeed
         {
             get { return _depleteSpeed; }
         }
 
-        [SerializeField] private float _moveDepleteSpeed = 40f;
+        [SerializeField] private float _moveDepleteSpeed = 50f;
         public float MoveDepleteSpeed
         {
             get { return _moveDepleteSpeed; }
