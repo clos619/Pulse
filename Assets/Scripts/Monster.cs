@@ -148,7 +148,7 @@ public class Monster : MonoBehaviour {
                 }
             }
         }
-        else  // Not patrolling or tracking.
+        else if (isRotating) // Need this check so turrets stop rotating when shooting the player.
         {
             Rotate(true); // is a sentry
         }
@@ -257,6 +257,7 @@ public class Monster : MonoBehaviour {
 
     public void Stop()
     {
+        Debug.Log("Stopping");
         isPatrolling = false;
         isRotating = false;
         isTracking = false;
