@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 23354786900499818}
   - component: {fileID: 114745715985664622}
   m_Layer: 0
-  m_Name: Monster
+  m_Name: Monster Old
   m_TagString: Pingable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,8 +192,6 @@ MonoBehaviour:
   - {x: -25, y: 1, z: -25}
   - {x: 25, y: 1, z: -25}
   isPatrolling: 0
-  destinationRotation: {x: 0, y: 0, z: 0, w: 0}
-  facing: {x: 0, y: 0, z: 0, w: 0}
 --- !u!136 &136043680132743192
 CapsuleCollider:
   m_ObjectHideFlags: 1

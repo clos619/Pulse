@@ -21,6 +21,7 @@ public class VissionCollision : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             // Call death animation/game over stuff
+            GameOverManager.Instance.GameOver();
         }
     }
 
