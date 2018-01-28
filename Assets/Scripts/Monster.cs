@@ -44,7 +44,7 @@ public class Monster : MonoBehaviour {
     // TODO: Figure out how to figure this out.
     private Vector3 destinationDirection;
 
-    public Quaternion destinationRotation;
+    private Quaternion destinationRotation;
     private Quaternion startRotation;
     private float rotationAngle;
     private float rotationTime;
