@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 4339461447563226}
   - component: {fileID: 33047533682995090}
   - component: {fileID: 23331507100160164}
+  - component: {fileID: 95769511301083652}
   m_Layer: 0
   m_Name: Hero (1)
   m_TagString: Untagged
@@ -227,7 +228,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576153410172710}
-  m_LocalRotation: {x: 0.47998416, y: -0.062857054, z: 0.10197963, w: 0.8690595}
+  m_LocalRotation: {x: 0.48605347, y: -0.063651875, z: 0.10326914, w: 0.8654686}
   m_LocalPosition: {x: 0.013301078, y: 0.96287525, z: 0.41256726}
   m_LocalScale: {x: 0.47427702, y: 0.2323561, z: 0.689427}
   m_Children: []
@@ -577,6 +578,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95769511301083652
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995497068940200}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 173cb4478302b30439002d35b97675c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114542383547374492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -631,6 +649,7 @@ MonoBehaviour:
   _characterController: {fileID: 143557992939981112}
   _movementSpeed: 11
   _playerVisual: {fileID: 4147220279441792}
+  Animator: {fileID: 95769511301083652}
   OnMove:
     m_PersistentCalls:
       m_Calls:

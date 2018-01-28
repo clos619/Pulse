@@ -19,6 +19,8 @@ namespace Assets.Scripts
         [SerializeField]
         private Transform _playerVisual;
 
+        public Animator Animator;
+
         /// <summary>
         /// returns movement input from 0-1
         /// </summary>
@@ -47,6 +49,7 @@ namespace Assets.Scripts
                 OnMove.Invoke(input.magnitude);
             }
 
+            Animator.SetFloat("Magnitude", input.magnitude);
             if (movement.magnitude > 0.02)
             {
                 _playerVisual.forward =  transform.TransformDirection(input);
