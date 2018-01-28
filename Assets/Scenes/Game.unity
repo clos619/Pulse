@@ -5529,6 +5529,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114344519574040592, guid: 75ff889e20161464cafb5e8654730a80,
+        type: 2}
+      propertyPath: _energy
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75ff889e20161464cafb5e8654730a80, type: 2}
   m_IsPrefabParent: 0
@@ -7958,8 +7963,8 @@ Transform:
   - {fileID: 590741811}
   - {fileID: 892027622}
   - {fileID: 572832467}
-  - {fileID: 153879707}
   - {fileID: 244195749}
+  - {fileID: 153879707}
   - {fileID: 1442335752}
   - {fileID: 371672124}
   - {fileID: 1831682315}
