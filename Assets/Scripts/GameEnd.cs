@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameEnd : MonoBehaviour {
 
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+	    StartCoroutine(TimedGoodbye());
 	}
 	
 	// Update is called once per frame
@@ -16,4 +18,11 @@ public class GameEnd : MonoBehaviour {
             Application.Quit();
 	    }
 	}
+
+    IEnumerator TimedGoodbye()
+    {
+        yield return new WaitForSeconds(10f);
+
+        TextBox.Instance.ShowText("[Computer] Goodbye Captain", 3f);
+    }
 }

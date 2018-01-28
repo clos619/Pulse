@@ -8,9 +8,16 @@ namespace Assets.Scripts
 
     public class PlayerStats : MonoBehaviour
     {
-        
-        
-        [SerializeField] private float _energy = 1500;
+
+        // energyUI needs to know what the maximum energy is.
+        [SerializeField] private const int MAX_ENERGY = 1500;
+        public int MaxEnergy
+        {
+            get { return MAX_ENERGY; }
+        }
+
+
+        [SerializeField] private float _energy = MAX_ENERGY;
         public float Energy
         {
             get { return _energy; }
