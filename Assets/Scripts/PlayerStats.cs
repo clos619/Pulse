@@ -30,8 +30,7 @@ namespace Assets.Scripts
 
         // Use this for initialization
         void Start () {
-            GameObject energyUI = GameObject.Find("energyUI");
-            PlayerStats playerStats = energyUI.GetComponent<PlayerStats>();
+            
         }
 	
         // Update is called once per frame
@@ -39,6 +38,14 @@ namespace Assets.Scripts
         {
             
             _energy -= Time.deltaTime * _depleteSpeed;
+
+            if (_energy <= 0)
+            {
+                if (GameOverManager.Instance != null)
+                {
+                    GameOverManager.Instance.GameOver();
+                }
+            }
         }
 
         public void UseMove(float inputScale)
@@ -46,10 +53,10 @@ namespace Assets.Scripts
             _energy -= inputScale * Time.deltaTime * _moveDepleteSpeed;
         }
 
-        void replenish()
+        public void Replenish(float amount)
         {
             
-            _energy = _energy + 100;
+            _energy = _energy + amount;
             
             //screenShake.stop();
             //playerAudio.stop();
