@@ -28,5 +28,9 @@ public class energyBoost : MonoBehaviour {
             life.energySlider.size = playerstats.Energy + boostEnergy;
 
         }
+        if (erg.GetComponent<Collider>())
+        {
+            erg.gameObject.SetActive(false);
+        }
     }
 }
