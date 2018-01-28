@@ -115,7 +115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1438685268503198
 GameObject:
   m_ObjectHideFlags: 1
@@ -382,7 +382,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You did not escape the panet...
+  m_Text: You did not escape the planet...
 --- !u!114 &114642744688220244
 MonoBehaviour:
   m_ObjectHideFlags: 1
