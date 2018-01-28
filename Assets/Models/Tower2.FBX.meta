@@ -1,17 +1,31 @@
 fileFormatVersion: 2
-guid: dbea30dc7365fd74091b4f32b07a558e
-timeCreated: 1517124607
+guid: cf34d02345c9cff4883be54f2b0ccbad
+timeCreated: 1517168112
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Box001
+    100002: Cylinder001
+    100004: Cylinder002
+    100006: PhysCamera001
+    100008: PhysCamera001.Target
+    100010: //RootNode
+    400000: Box001
+    400002: Cylinder001
+    400004: Cylinder002
+    400006: PhysCamera001
+    400008: PhysCamera001.Target
+    400010: //RootNode
     2100000: No Name
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Plane
-    4300002: TurtleShip
+    2300000: Cylinder001
+    2300002: Cylinder002
+    3300000: Cylinder001
+    3300002: Cylinder002
+    4300000: Cylinder001
+    4300002: Cylinder002
+    7400000: Take 001
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -86,7 +100,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

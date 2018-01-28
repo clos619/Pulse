@@ -1,17 +1,16 @@
 fileFormatVersion: 2
-guid: dbea30dc7365fd74091b4f32b07a558e
-timeCreated: 1517124607
+guid: d1bbc398d8b3860408a51017ff845e8d
+timeCreated: 1517168114
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: material0
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane
-    4300002: TurtleShip
+    4300000: PM3D_Skin_ZSphere_1
   externalObjects: {}
   materials:
     importMaterials: 1
