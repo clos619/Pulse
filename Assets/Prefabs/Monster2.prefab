@@ -804,10 +804,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3129b37bc82026e48abfa5de48e40c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 4
-  rotationSpeed: 45
-  trackMovementMultiplier: 1.5
-  trackRotationMultiplier: 1.5
+  movementSpeed: 12
+  rotationSpeed: 60
+  trackMovementMultiplier: 2
+  trackRotationMultiplier: 2
   stunTime: 0
   trackMaxDistance: 40
   patrolPath:
