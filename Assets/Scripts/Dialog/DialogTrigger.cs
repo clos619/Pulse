@@ -21,7 +21,7 @@ public class DialogTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (shown == false)
+        if (shown == true)
         {
             return;
         }
