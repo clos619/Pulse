@@ -11,19 +11,19 @@ MonoBehaviour:
   m_Script: {fileID: -667331979, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: NotoSans SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -61905084
   material: {fileID: 21852334052279528}
-  materialHashCode: 0
+  materialHashCode: 1060975439
   fontAssetType: 1
   m_fontInfo:
     Name: Noto Sans
     PointSize: 70
-    Scale: 0
+    Scale: 1
     CharacterCount: 99
     LineHeight: 95.3125
     Baseline: 0
     Ascender: 74.8125
-    CapHeight: 0
+    CapHeight: 50
     Descender: -20.5
     CenterLine: 0
     SuperscriptOffset: 74.8125
@@ -33,7 +33,7 @@ MonoBehaviour:
     UnderlineThickness: 3.4863281
     strikethrough: 19.75
     strikethroughThickness: 3.4863281
-    TabWidth: 0
+    TabWidth: 181.875
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
@@ -42,10 +42,10 @@ MonoBehaviour:
   - id: 32
     x: 6
     y: 517
-    width: 0
-    height: 0
+    width: 18.1875
+    height: 95.3125
     xOffset: 0
-    yOffset: 0
+    yOffset: 74.8125
     xAdvance: 18.1875
     scale: 1
   - id: 33
@@ -1043,9 +1043,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
