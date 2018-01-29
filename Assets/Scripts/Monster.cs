@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour {
     // What it says on the tin.
-    public float movementSpeed = 500.0f;
-    public float rotationSpeed = 105f; //degrees per second
+    public float movementSpeed = 12.0f;
+    public float rotationSpeed = 60f; //degrees per second
                                       // at 45 does a 360 in 8 seconds.
 
     // Monsters should probably be faster if they're actually chasing something.
