@@ -23,6 +23,6 @@ public class GameEnd : MonoBehaviour {
     {
         yield return new WaitForSeconds(10f);
 
-        TextBox.Instance.ShowText("[Computer] Goodbye Captain", 3f);
+        TextBox.Instance.ShowText("[S1OWP0K3] Goodbye Captain", 3f);
     }
 }
